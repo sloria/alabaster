@@ -1,3 +1,7 @@
+This is my fork of @bitprophet's [alabaster](https://github.com/bitprophet/alabaster) theme.  The `sloria` branch contains all my modifications. Some of these modifications may get merged upstream, some of them may not.
+
+-------------------
+
 # Alabaster: a Sphinx theme
 
 This theme is a modified "Kr" Sphinx theme from @kennethreitz (especially as
