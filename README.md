@@ -1,5 +1,13 @@
 This is my fork of @bitprophet's [alabaster](https://github.com/bitprophet/alabaster) theme.  The `sloria` branch contains all my modifications. Some of these modifications may get merged upstream, some of them may not.
 
+To use this in a project, include the following in your `requirements.txt` file.
+
+```bash
+git+https://github.com/sloria/alabaster.git@sloria
+```
+
+Then follow the instructions below to configure.
+
 -------------------
 
 # Alabaster: a Sphinx theme
