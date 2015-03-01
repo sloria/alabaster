@@ -2,9 +2,9 @@ This is my fork of @bitprophet's `alabaster <https://github.com/bitprophet/alaba
 
 To use this in a project, include the following in your `requirements.txt` file.
 
-```bash
-git+https://github.com/sloria/alabaster.git@sloria
-```
+.. code-block:: python
+
+    git+https://github.com/sloria/alabaster.git@sloria
 
 Then follow the instructions below to configure.
 
