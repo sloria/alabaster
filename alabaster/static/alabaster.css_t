@@ -127,6 +127,10 @@ div.sphinxsidebar a {
     border-bottom: 1px dotted {{ theme_sidebar_link_underscore }};
 }
 
+div.sphinxsidebar .badge {
+    border-bottom: none;
+}
+
 div.sphinxsidebar a:hover {
     border-bottom: 1px solid {{ theme_sidebar_link_underscore }};
 }

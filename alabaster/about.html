@@ -24,6 +24,14 @@
 {% endif %}
 {% endif %}
 
+{% if theme_donate_url %}
+<p>
+<a class="badge" href="{{ theme_donate_url }}">
+ <img src="https://img.shields.io/badge/donate-%E2%9D%A4%C2%A0-green.svg?style=flat" alt="Donate">
+</a>
+</p>
+{% endif %}
+
 {% if theme_travis_button|lower != 'false' %}
 {% if theme_travis_button|lower == 'true' %}
     {% set path = theme_github_user + '/' + theme_github_repo %}
