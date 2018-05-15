@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -53,3 +52,10 @@ docs/_build/
 
 # PyBuilder
 target/
+=======
+*.egg-info/
+build/
+dist/
+docs/_build
+*.egg-info
+*.py[cod]

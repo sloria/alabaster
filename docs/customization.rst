@@ -104,6 +104,9 @@ Variables and feature toggles
      ``$PROJECT/_static/``) to be used as the banner image instead of the
      default.
 
+* ``badge_branch``: Set which branch is used in Travis, CodeCov, etc badges.
+  Defaults to ``master``.
+
 * ``travis_button``: ``true``, ``false`` or a Github-style ``"account/repo"``
   string - used to display a `Travis-CI <https://travis-ci.org>`_ build status
   button in the sidebar. If ``true``, uses your ``github_(user|repo)``
@@ -158,6 +161,10 @@ Variables and feature toggles
   main body of the page scrolls but the sidebar remains visible. (Applies only
   to desktop window sizes; the mobile view is unaffected.) Defaults to
   ``false``.
+* ``show_relbars``: ``true`` or ``false``, defaults to ``false`` - used to
+  display *next* and *previous* links above and below the main page content. If
+  you only want to display one, this setting can be further overridden through
+  the ``show_relbar_top`` and ``show_relbar_bottom`` settings.
 
 Style colors
 ------------
@@ -208,6 +215,8 @@ colorscheme. The more granular settings can be used to override as needed.
 * ``narrow_sidebar_fg``: Text color of same.
 * ``narrow_sidebar_link``: Link color of same. Defaults to ``gray_3``.
 * ``code_highlight``: Color of highlight when using ``:emphasize-lines:`` in a code block.
+* ``relbar_border``: Color of border between bar holding *next* and *previous*
+  links, and the rest of the page content. Defaults to ``gray_2``.
 
 Fonts
 -----

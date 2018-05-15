@@ -2,6 +2,45 @@
 Changelog
 =========
 
+* :bug:`73` Clean up some problematic font issues:
+
+  - Remove the outright broken Goudy Old Style, plus other mostly Adobe-only
+    fonts, from the ``font_family`` config setting; it is now simply ``Georgia,
+    serif`` which is what the majority of users were rendering anyways.
+  - Clear out the default value of ``head_font_family`` (which contained
+    ``Garamond``, a nice but also Adobe only font)
+  - Set ``head_font_family`` so it falls back to the value of ``font_family``
+    unless a user has explicitly set it themselves.
+
+  .. note::
+    You can always go back to the old values by :ref:`explicitly setting
+    <theme-options>` ``font_family`` and/or ``head_font_family`` in your
+    ``conf.py``'s ``html_theme_options``, e.g.::
+
+        html_theme_options = {
+            'description': 'My awesome project',
+            'font_family': "goudy old style, minion pro, bell mt, Georgia, Hiragino Mincho Pro, serif",
+        }
+
+  .. warning::
+    Depending on individual viewers' systems, this change *may* be **visually**
+    backwards incompatible if you were not already overriding the font
+    settings and those users had the fonts in question (which are not default
+    on most systems).
+
+    As seen in the note above, you can **always** override the new defaults to
+    go back to the old behavior, using your config file.
+
+* :feature:`18 backported` (via :issue:`101`) Add optional *next* and
+  *previous* links at the top and bottom of page content. Use theme option
+  ``show_relbars`` to enable these. Credit: William Minchin.
+* :support:`- backported` Miscellaneous project maintenance updates such as
+  adding to Travis CI and enforcing the use of ``flake8``.
+* :feature:`110 backported` Add ``badge_branch`` option allowing
+  configurability of which specific Git branch the Travis, Codecov, etc buttons
+  default to. Credit: ``@TitanSnow``.
+* :support:`111 backported` Add setuptools-level entrypoint for improved theme
+  distribution compatibility. Thanks to Aaron Carlisle for the patch.
 * :release:`0.7.10 <2017-02-28>`
 * :bug:`32` Update styling of various block-level elements such as admonitions
   (``.. note::``, ``.. warning::``, etc) and code blocks (``.. code::``) so
