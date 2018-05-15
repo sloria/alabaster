@@ -127,13 +127,18 @@ div.sphinxsidebar a {
     border-bottom: 1px dotted {{ theme_sidebar_link_underscore }};
 }
 
+div.sphinxsidebar a:hover {
+    border-bottom: 1px solid {{ theme_sidebar_link_underscore }};
+}
+
 div.sphinxsidebar .badge {
     border-bottom: none;
 }
 
-div.sphinxsidebar a:hover {
-    border-bottom: 1px solid {{ theme_sidebar_link_underscore }};
+div.sphinxsidebar .badge:hover {
+    border-bottom: none;
 }
+
 
 div.sphinxsidebarwrapper {
     padding: 18px 10px;
