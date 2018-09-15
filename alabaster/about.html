@@ -24,27 +24,6 @@
 {% endif %}
 {% endif %}
 
-{% if theme_donate_url or theme_opencollective %}
-<h3>Donate</h3>
-
-<p>If you find {{ project }} useful, please consider supporting the team with a donation:</p>
-
-<p>
-
-    {% if theme_donate_url %}
-    <a class="badge" href="{{ theme_donate_url }}">
-    <img src="https://img.shields.io/badge/donate-%E2%9D%A4%C2%A0-ff69b4.svg?style=flat" alt="Donate">
-    </a>
-    {% elif theme_opencollective %}
-    <a class="badge" href="https://opencollective.com/{{ theme_opencollective }}/donate" target="_blank">
-      <img src="https://opencollective.com/{{ theme_opencollective }}/donate/button.png?color={{ theme_opencollective_button_color }}" width=300 />
-    </a>
-    {% endif %}
-</p>
-
-<p>Your donation helps move {{ project }} forward.</p>
-{% endif %}
-
 {% if theme_travis_button|lower != 'false' %}
 {% if theme_travis_button|lower == 'true' %}
     {% set path = theme_github_user + '/' + theme_github_repo %}
@@ -52,7 +31,7 @@
     {% set path = theme_travis_button %}
 {% endif %}
 <p>
-<a href="https://travis-ci.org/{{ path }}">
+<a class="badge" href="https://travis-ci.org/{{ path }}">
     <img
         alt="https://secure.travis-ci.org/{{ path }}.svg?branch={{ theme_badge_branch }}"
         src="https://secure.travis-ci.org/{{ path }}.svg?branch={{ theme_badge_branch }}"
@@ -68,7 +47,7 @@
     {% set path = theme_codecov_button %}
 {% endif %}
 <p>
-<a href="https://codecov.io/github/{{ path }}">
+<a class="badge" href="https://codecov.io/github/{{ path }}">
     <img
     alt="https://codecov.io/github/{{ path }}/coverage.svg?branch={{ theme_badge_branch }}"
     src="https://codecov.io/github/{{ path }}/coverage.svg?branch={{ theme_badge_branch }}"
