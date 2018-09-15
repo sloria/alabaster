@@ -26,6 +26,14 @@ Consider supporting the authors on <a href="https://www.gratipay.com/">Gratipay<
     </a>
     {% endif %}
 </p>
+{% endif %}
 
 <p>Your donation keeps {{ project }} healthy and maintained.</p>
+
+{% if theme_tidelift_url %}
+<h3>Professional support</h3>
+<p>
+Professionally-supported {{ project }} is available with the
+<a href="{{ theme_tidelift_url }}">Tidelift Subscription</a>.
+</p>
 {% endif %}
